@@ -1,0 +1,13 @@
+TROUBLESHOTTING
+
+    Ошибка подключения модуля может быть из-за того, что зависимость уже добавлена ранее.
+    Так mix.autoload() в конфиге, который предоставляет зависимость для других пакетов ВЕБПАКА
+    препятствует добавлению модуля, например через ProvidePlugin
+
+    возможные конфликты библиотеки: https://stackoverflow.com/questions/25757968/bootstrap-modal-is-not-a-function
+
+
+
+
+        Не работет $jq.click(), то необходимо испоьзовать делегирование:
+                $(document || anotherParent).on('event', '#selector', function (e) ){}

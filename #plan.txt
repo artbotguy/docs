@@ -1,0 +1,35 @@
+BACKEND
+  PHP
+    - linter
+    
+    WORDPRESS
+      - Lifecycle wp
+    LARAVEL
+
+
+
+FRONTEND
+  JS
+    VUE
+      - ESLint
+      - https://vuejs.org/style-guide/rules-strongly-recommended.html#single-instance-component-names
+
+  CSS
+    - https://habr.com/ru/post/335244/ (модули)
+    
+    TAILWIND
+      
+    BEM
+    - https://ru.bem.info/methodology/quick-start/
+    
+  SVG
+
+FULLSTACK
+  RegExp
+    - https://learn.javascript.ru/regular-expressions
+  UML
+    - dagram
+  DEBUG
+    - отключить блядское моргание
+  БУФФЕР
+  	- найти аналог буффера Win

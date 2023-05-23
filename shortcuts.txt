@@ -1,0 +1,9 @@
+VSCODE
+
+SHIFT+CTRL+PageUp|PageDown 	- Move Editor Left
+
+
+
+LINUX
+
+SUPER+MOUSEWHEEL            - WINDOW/WORKtable

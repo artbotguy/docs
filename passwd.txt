@@ -1,0 +1,30 @@
+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
+
+--------------------------------------------------
+
+
+amogusxj
+hYD4tQfH
+
+db, ftp 
+	
+	amogusxj_db / amogusxj_ftp
+	suLQ#V1iFNx83D*rfNaxEpDL
+
+ssh amogusxj@amogusxj.beget.tech
+ssh localhost -p 222
+
+scp 
+--------------------------------------------------
+
+WP_USERNAME: artbot
+WP_PASSWORD: suLQ#V1iFNx83D*rfNaxEpDL
+
+***
+
+
+
+cd ~/amogusxj.beget.tech/public_html/wp-content/themes/logotype-ssg/
+
+
+

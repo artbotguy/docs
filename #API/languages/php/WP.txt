@@ -1,0 +1,63 @@
+???
+
+    Ошибка подключения к db вордпресса после установки новой версии.
+    Вместо установки констант в .env установил в wp-config.php (примечание: из коробки
+    докер-вордпресс имеет wp-config-example.php стандартную настройку, я поставил ту, в которойпроисходит переопределение docker_env
+    но и это не помогло. Поэтому поставил мои данные как дефолтные) 
+
+
+
+
+Причниы НЕ подключения скриптов/стилей:
+    - отсутствуют зависимости
+    - wp_deregister_script() из-за невыясненных несоответствий - например, с jquery
+
+
+
+
+
+{{Перенос на хостинг}}:
+    - установка правильной версии PHP
+
+    - установка в wp-settigs.php:
+        - DB_HOST - localhost
+        
+    - заменить ссылки с помощью плагина Update URL
+
+    - почистить Cache images and files
+
+    ***
+
+    - критическая ошибка:
+        - отключить плагины, ТЕМУ
+
+    - ошибки импорта бд:
+        - убедиться, что экспортируется правильная бд
+
+
+TROUBLESHOOTING
+
+    Error include styles (admin panel)
+        db/options/siteurl: http://<siteurl>/
+        
+	[cURL] 
+		В wordpress docker вызов php curl из пакета automattic/woocommerce приводил
+		к ошибкам. Connection refused, timeout etc. 
+		Ошибки возникали в файле functions.php. Вызов в клиентском классе решил проблему
+
+    Ошибка с подключение скриптов - скрипты регистрируются и подключаются, но не включаются
+        - отключить wp_deregister_script('jquery');
+
+
+
+    {{WOOCOMMERCE}}
+        401 error woocomerce:
+        ошибка из-за неправильного хоста в админке wordpress - изменил с //localhost на http://localhost 
+        usr/local/etc/php-fpm.d/www.conf
+
+        подключение стилей и скриптов:
+            пути, которые использутся при навигации в каталоге файлов и для подключения файло разные
+            - для фалового дерева (например для поиска и подклюючения файлов) используются такие функции как 
+            get_stylesheet_directory() (путь получится: http://example.com/var/wwww/html/wp-content/themes/my-theme/my-theme-script.js.) и ей подобные
+            - для подключения файлов - get_template_directory_uri() (путь получится: http://example.com/wp-content/themes/my-theme/my-theme-script.js.)
+

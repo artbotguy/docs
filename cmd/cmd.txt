@@ -1,0 +1,34 @@
+{{ALL}}
+code <F>
+
+wget <LINK>                     load files
+
+
+
+
+{{NPM}}
+npm
+npm -y                          - set default
+
+
+{{VSCODE}}
+code . -r                       - open folder in current window
+
+{{WSL}}
+wsl -l -v                   Cписок дистрибутивов и их текущее состояние
+wsl --shutdown              Выключить все
+wsl -t <DistroName>         Завершить определенный дистрибутив
+wsl                         Загрузите дистрибутив по умолчанию (отмечен *)
+wsl -d <DistroName>         Загрузите определенный дистрибутив
+
+{{SSH}}
+ssh -tt                         - fix...
+
+scp -r /path/to/local/dir user@remotehost:/path/to/remote/dir         		- очень долго
+rsync -avz -e 'ssh' /src user@remotehost:/dest     - важно указать конечную папку - копирует файлы из src в dest
+	https://askubuntu.com/questions/446724/copy-folders-not-one-file-using-ssh-ubuntu
+
+
+
+{{PHP}}
+php -m                      - extentions list 

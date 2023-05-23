@@ -1,0 +1,4 @@
+1. Заполнить wp-config.php константами из окружения docker. Он должен находиться в /var/www/html - так DotEnv(__DIR__) получит к нему доступ в wpconfig
+
+2. Перед запуском composer
+	$ sudo apt install php-xmlwriter (если не установлен)

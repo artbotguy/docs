@@ -1,0 +1,22 @@
+
+
+23.06
+
+	SDKMAN
+		curl -s "https://get.sdkman.io" | bash
+
+		SDKMAN может не находиться, фиксим:
+
+			nano $HOME/.bash_profile
+				# SDK Man replaced GVM. Using for Groovy, Gradle, and Maven Version Management
+				export SDKMAN_DIR="$HOME/.sdkman"
+				[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+			(изначально сюда добавляется код выше при установке)
+			sudo nano ~/.zshrc
+			source ~/.bash_profile
+
+	GRABLE
+		sdk install gradle 8.1.1
+
+		

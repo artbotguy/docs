@@ -1,3 +1,11 @@
+
+Невозможность загружать изображения больших размеров:
+    Установить в .htaccess
+        php_value upload_max_filesize 50M
+        php_value post_max_size 50M
+        php_value max_execution_time 300
+        php_value max_input_time 300
+
 ???
 
     Ошибка подключения к db вордпресса после установки новой версии.
@@ -19,12 +27,15 @@
 {{Перенос на хостинг}}:
     - установка правильной версии PHP
 
-    - установка в wp-settigs.php:
+    - установка в wp-config.php:
         - DB_HOST - localhost
+        - убедиться в том, что в wp-config.php установлены WP_HOME и WP_SITEURL
         
-    - заменить ссылки с помощью плагина Update URL
-
     - почистить Cache images and files
+
+    (ОПЦИОНАЛЬНО)
+    - заменить ссылки с помощью плагина Update URL (актуально для Logotype SSG)
+
 
     ***
 
@@ -32,7 +43,10 @@
         - отключить плагины, ТЕМУ
 
     - ошибки импорта бд:
-        - убедиться, что экспортируется правильная бд
+        - убедиться, что экспортируется правильная бд (база, а не таблица)
+
+    - 
+        https://stackoverflow.com/questions/58931144/enqueue-javascript-with-type-module
 
 
 TROUBLESHOOTING

@@ -13,19 +13,17 @@
     sudo apt dist-upgrade
 
 {{NODE}} (install to hosting in docker-ubuntu 
-(!!! - может возникать ошибка несовместимости - исплользовать 16 node))
+(!!! - может возникать ошибка несовместимости хостинга - исплользовать 16 node))
 (!) - работает (ОДИН РАЗ - если установить сразу, затем после переустановки находит и запускает - мб зависит от настройки .bashrc), но установка node_modules не происходит по команде
 
-    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
-        **OR**
-    $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 
-    $ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     
-    $ nvm install 16
+    nvm install 16
 
-        ***if bin/node which another path***
+        ***если bin/node which другой путь***
         ~/.bashrc
             PATH=/home/a/amogusxj/.nvm/versions/node/v16.19.1/bin/node:$PATH
 

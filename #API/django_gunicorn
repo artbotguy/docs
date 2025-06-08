@@ -1,0 +1,5 @@
+DJANGO 
+    [не решено] Кешируется HTML (with gunicorn)
+        https://stackoverflow.com/questions/66383682/reload-gunicorn-in-docker-on-html-file-change-conditional-django-debug-mode
+
+        Добавление в settings.py TEMPLATES.OPTIONS.gebug просто перезагружает воркер

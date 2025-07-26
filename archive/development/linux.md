@@ -1,18 +1,20 @@
-\\\\END - BASE SETTINGS after install////
 
 
 
-{{NODE}} 
-    curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
-    sudo apt-get install -y nodejs
-        (if error install)
-    curl -fsSL <link>
-    sudo dpkg -i --force-overwrite /var/cache/apt/archives/<archive-name>
-    sudo apt -f install
-    sudo apt update
-    sudo apt dist-upgrade
+## при установке
 
-{{NODE}} (install to hosting in docker-ubuntu 
+
+#### NODE 
+curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+    (if error install)
+curl -fsSL <link>
+sudo dpkg -i --force-overwrite /var/cache/apt/archives/<archive-name>
+sudo apt -f install
+sudo apt update
+sudo apt dist-upgrade
+
+#### NODE устанавливаем на виртуалку
 (!!! - может возникать ошибка несовместимости хостинга - исплользовать 16 node))
 (!) - работает (ОДИН РАЗ - если установить сразу, затем после переустановки находит и запускает - мб зависит от настройки .bashrc), но установка node_modules не происходит по команде
 
@@ -27,7 +29,7 @@
         ~/.bashrc
             PATH=/home/a/amogusxj/.nvm/versions/node/v16.19.1/bin/node:$PATH
 
-{{NODE -ИСПОЛЬЗЕТСЯ- Passanger... (попытки использования с CronTab не увенчались успехом)}} (по туториалу beget)
+#### NODE -ИСПОЛЬЗЕТСЯ- Passanger... (попытки использования с CronTab не увенчались успехом) (по туториалу beget)
     Переходим в окружение docker
     cd ~/.local 
     wget https://nodejs.org/dist/v17.9.1/node-v17.9.1-linux-x64.tar.xz 
@@ -38,7 +40,7 @@ PATH=/home/a/anyaaa6t/.local/bin/node:$PATH
 PATH=/home/a/anyaaa6t/.local/bin/npm:$PATH
 
 
-{{NODE dockerfile}}
+#### NODE dockerfile
     (1)
         RUN apt-get update && apt-get install -y \
             software-properties-common \    
@@ -60,7 +62,7 @@ PATH=/home/a/anyaaa6t/.local/bin/npm:$PATH
         RUN npm --version 
 
 
-==============================={{{{{{{{{{{{{{{{{{{{{UTILITES}}}}}}}}}}}}}}}}}}}}}]=================================================================
+## NODE UTILITES
 BASH SCRIPT COMMAND
 
 Only you - $HOME/.local/bin (As per the XDG Base Directory Specification)
@@ -107,7 +109,7 @@ AFTER INTSALL
 
 
 {{OS}}
-    Not showing boot manager (load Windows)
+    Не показывает boot loader (load Windows)
     fix: 
         in Linux terminal (installed Linux system)
 

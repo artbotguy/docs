@@ -1,0 +1,8 @@
+WP_USERNAME: artbot
+WP_PASSWORD: suLQ#V1iFNx83D*rfNaxEpDL
+
+
+
+
+
+

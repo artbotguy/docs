@@ -1,0 +1,206 @@
+{
+  "main": {
+    "id": "ac16cf8a0180261d",
+    "type": "split",
+    "children": [
+      {
+        "id": "b267aad86780f98a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c83d2efbfc5f77bd",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "alle.canvas",
+                "viewState": {
+                  "x": 119.09051714068056,
+                  "y": -549.6975940194038,
+                  "zoom": -0.8830688819034264
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "alle"
+            }
+          },
+          {
+            "id": "6a39d8489cbe18f5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LvlUp.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LvlUp"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d725771592764df1",
+    "type": "split",
+    "children": [
+      {
+        "id": "e10c745695994ed4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8584d260b1d1aed9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Файловый менеджер"
+            }
+          },
+          {
+            "id": "af9979e68f24f7a5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Поиск"
+            }
+          },
+          {
+            "id": "b6aeadf436cf30f7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Закладки"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "40c4af3b20a1a8c5",
+    "type": "split",
+    "children": [
+      {
+        "id": "07210e325fbbdf95",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1d960be51d936480",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "alle.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Обратные ссылки для alle"
+            }
+          },
+          {
+            "id": "9d2b92134238222f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "alle.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Исходящие ссылки из alle"
+            }
+          },
+          {
+            "id": "a7e63823d5e3adea",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Теги"
+            }
+          },
+          {
+            "id": "6facbe382612a8ce",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "alle.canvas",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Структура alle"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false
+    }
+  },
+  "active": "c83d2efbfc5f77bd",
+  "lastOpenFiles": [
+    "chrome.md",
+    "certbot.md",
+    "LvlUp.md",
+    "alle.canvas",
+    "ALL.canvas",
+    "Ideas.md",
+    "doc/linux.md",
+    "doc/http.md",
+    "pgm/ssh&rsync.md",
+    "pgm/linux.md",
+    "pgm/git.md",
+    "pgm/docker.md",
+    "linux new.md",
+    "syncthing.md",
+    "nginx.md"
+  ]
+}

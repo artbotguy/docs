@@ -1,0 +1,248 @@
+<diagram program="umletino" version="15.1"><zoom_level>2</zoom_level><help_text>--
+</help_text><element><id>UMLClass</id><coordinates><x>716</x><y>1140</y><w>42</w><h>36</h></coordinates><panel_attributes>WC_REST_CRUD_Controller
+--
+--
+prepare_objects_query( $request )
+get_items( $request )
+save_object($request, $creating = false)
+create_item()
+prepare_object_for_database()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>716</x><y>1118</y><w>42</w><h>14</h></coordinates><panel_attributes>WC_REST_Posts_Controller
+--
+create_item_permissions_check()
+create_item()
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>716</x><y>1096</y><w>42</w><h>14</h></coordinates><panel_attributes>WC_REST_Controller
+--
+--
+create_item()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>716</x><y>1074</y><w>42</w><h>14</h></coordinates><panel_attributes>WP_REST_Controller
+--
+--
+create_item_permissions_check()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>734</x><y>1086</y><w>6</w><h>14</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>734</x><y>1108</y><w>6</w><h>14</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>734</x><y>1130</y><w>6</w><h>14</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>716</x><y>1182</y><w>42</w><h>28</h></coordinates><panel_attributes>WC_REST_Products_V2_Controller
+--
+--
+register_routes( $server )
+get_item_schema()
+save_object()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>716</x><y>1214</y><w>42</w><h>14</h></coordinates><panel_attributes>WC_REST_Products_Controller
+--
+--
+save_object()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>734</x><y>1174</y><w>6</w><h>12</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>734</x><y>1208</y><w>6</w><h>10</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30</additional_attributes></element><element><id>UMLNote</id><coordinates><x>672</x><y>1144</y><w>28</w><h>14</h></coordinates><panel_attributes>"callback"</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>698</x><y>1146</y><w>22</w><h>8</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>528</x><y>1000</y><w>42</w><h>14</h></coordinates><panel_attributes>WP_Post_Type
+--
++cap: stdClass
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>672</x><y>1074</y><w>28</w><h>16</h></coordinates><panel_attributes>public function create_item_permissions_check( $request ) {
+	return new WP_Error(
+		'invalid-method',
+		/* translators: %s: Method name. */
+		sprintf( __( "Method '%s' not implemented. Must be overridden in subclass." ), __METHOD__ ),
+		array( 'status' =&gt; 405 )
+	);
+}</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>698</x><y>1078</y><w>22</w><h>8</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>672</x><y>1118</y><w>26</w><h>14</h></coordinates><panel_attributes>wc_rest_check_post_permissions()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>696</x><y>1120</y><w>24</w><h>8</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>692</x><y>824</y><w>68</w><h>14</h></coordinates><panel_attributes>WC_Session_Handler
+--
+
+--
+construct()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>798</x><y>824</y><w>68</w><h>20</h></coordinates><panel_attributes>Woocommerce
+--
++session : WC_Session|WC_Session_Handler
+--
+construct()
+initialize_session()
+init_hooks()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>692</x><y>790</y><w>68</w><h>20</h></coordinates><panel_attributes>/WC_Session/
+--
+
+--
+construct()
+init()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>722</x><y>808</y><w>6</w><h>20</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>758</x><y>824</y><w>44</w><h>6</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>200;10;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>622</x><y>828</y><w>62</w><h>18</h></coordinates><panel_attributes>		$this-&gt;_cookie = apply_filters( 'woocommerce_cookie', 'wp_woocommerce_session_' . COOKIEHASH );
+		$this-&gt;_table  = $GLOBALS['wpdb']-&gt;prefix . 'woocommerce_sessions';
+
+/********/
+define( 'COOKIEHASH', md5( $siteurl ) );</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>682</x><y>830</y><w>14</w><h>8</h></coordinates><panel_attributes></panel_attributes><additional_attributes>50;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>640</y><w>68</w><h>20</h></coordinates><panel_attributes>/WC_Data	/
+--
+
+--
+construct()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>670</y><w>68</w><h>20</h></coordinates><panel_attributes>/WC_Legacy_Customer	/
+--
+
+--
+construct()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>700</y><w>68</w><h>20</h></coordinates><panel_attributes>WC_Customer
+--
+
+--
+construct()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>688</y><w>6</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>694</y><w>68</w><h>20</h></coordinates><panel_attributes>/WC_Legacy_Cart/
+--
+
+--
+construct()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>724</y><w>68</w><h>20</h></coordinates><panel_attributes>WC_Cart
+--
+
+--
+construct()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>712</y><w>6</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLNote</id><coordinates><x>778</x><y>1142</y><w>28</w><h>14</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>666</x><y>670</y><w>68</w><h>20</h></coordinates><panel_attributes>/WC_Abstract_Legacy_Order/
+--
+
+--
+construct()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>666</x><y>700</y><w>68</w><h>20</h></coordinates><panel_attributes>WC_Abstract_Order
+--
+
+--
+construct()
+calculate_totals()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>666</x><y>730</y><w>68</w><h>20</h></coordinates><panel_attributes>WC_Order	
+--
+
+--
+construct()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>658</y><w>94</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;450;40;450;60</additional_attributes></element><element><id>Relation</id><coordinates><x>698</x><y>718</y><w>6</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>698</x><y>688</y><w>6</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1016</x><y>1136</y><w>154</w><h>6</h></coordinates><panel_attributes>StoreApi</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1078</x><y>1128</y><w>28</w><h>14</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1080</x><y>1130</y><w>28</w><h>14</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1080</x><y>1130</y><w>28</w><h>14</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>368</x><y>584</y><w>68</w><h>20</h></coordinates><panel_attributes>WC_Data_Store
+--
+
+--
+construct()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>282</x><y>584</y><w>68</w><h>20</h></coordinates><panel_attributes>WC_Data_Store_WP
+--
+
+--
+construct()
+_load()_
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>534</x><y>708</y><w>28</w><h>14</h></coordinates><panel_attributes> WC_Data_Store::load( 'product-' . $this-&gt;get_type() );</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>708</y><w>24</w><h>8</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>658</y><w>6</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>282</x><y>614</y><w>68</w><h>20</h></coordinates><panel_attributes>WC_Product_Data_Store_CPT
+--
+
+--
+construct()
+_load()_
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>314</x><y>602</y><w>6</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLNote</id><coordinates><x>834</x><y>470</y><w>28</w><h>14</h></coordinates><panel_attributes>Convert the cart into a new draft order, 
+or update an existing draft order, 
+and return an updated cart response.</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>354</y><w>84</w><h>6</h></coordinates><panel_attributes>Automattic\WooCommerce\Blocks\Domain\Bootstrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>4</x><y>332</y><w>68</w><h>6</h></coordinates><panel_attributes>Automattic\WooCommerce\Blocks\Package</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>336</y><w>8</w><h>22</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>15;10;20;90</additional_attributes></element><element><id>Relation</id><coordinates><x>82</x><y>356</y><w>38</w><h>6</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;170;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>118</x><y>356</y><w>20</w><h>6</h></coordinates><panel_attributes>StoreApi</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>296</y><w>20</w><h>4</h></coordinates><panel_attributes>Checkout</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>272</y><w>20</w><h>6</h></coordinates><panel_attributes>RoutesController
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>26</x><y>276</y><w>6</w><h>24</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>742</x><y>354</y><w>94</w><h>18</h></coordinates><panel_attributes>/AbstractRoute/
+--
+
+--
+construct(SchemaController $schema_controller, AbstractSchema $schema)
+get_response()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>742</x><y>390</y><w>94</w><h>28</h></coordinates><panel_attributes>/AbstractCartRoute/
+--
+
+--
+construct(SchemaController $schema_controller, AbstractSchema $schema )
+get_response( \WP_REST_Request $request )
+add_nonce_headers( \WP_REST_Response $response )</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>786</x><y>370</y><w>6</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>846</x><y>390</y><w>56</w><h>26</h></coordinates><panel_attributes>CartController
+--
+
+--
+construct()
+load_cart()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>754</x><y>434</y><w>68</w><h>14</h></coordinates><panel_attributes>Cart
+--
+
+--
+construct()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>702</x><y>416</y><w>90</w><h>22</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>430;10;430;40;10;40;10;90;10;40;430;40;430;30;430;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>672</x><y>434</y><w>68</w><h>14</h></coordinates><panel_attributes>CartAddItem
+--
+
+--
+construct()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>656</x><y>308</y><w>78</w><h>20</h></coordinates><panel_attributes>RoutesController
+--
+
+--
+construct()
+register_routes()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>732</x><y>308</y><w>14</w><h>52</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;30;10;30;240;50;240</additional_attributes></element><element><id>UMLNote</id><coordinates><x>684</x><y>404</y><w>48</w><h>14</h></coordinates><panel_attributes>$this-&gt;cart_controller-&gt;load_cart();</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>726</x><y>400</y><w>20</w><h>8</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;80;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>834</x><y>434</y><w>68</w><h>20</h></coordinates><panel_attributes>Checkout
+--
+
+--
+construct()
+get_route_response()
+create_or_update_draft_order()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>786</x><y>416</y><w>86</w><h>22</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;410;40;410;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>846</x><y>352</y><w>56</w><h>26</h></coordinates><panel_attributes>OrderController
+--
+
+--
+create_order_from_cart()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>832</x><y>390</y><w>18</w><h>6</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>832</x><y>352</y><w>18</w><h>44</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;200;40;200;40;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>826</x><y>446</y><w>12</w><h>34</h></coordinates><panel_attributes></panel_attributes><additional_attributes>40;10;10;10;10;150;40;150</additional_attributes></element><element><id>Relation</id><coordinates><x>732</x><y>352</y><w>188</w><h>386</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>850;10;900;10;920;1890;10;1910</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>502</x><y>250</y><w>582</w><h>346</h></coordinates><panel_attributes>Woo Gutenberg Blocks
+--
+bg=#000080</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>742</x><y>324</y><w>94</w><h>22</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;	
+RouteInterface
+--
+
+--
+get_args()
+get+path()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>784</x><y>344</y><w>6</w><h>12</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>652</x><y>366</y><w>66</w><h>14</h></coordinates><panel_attributes>/DraftOrderTrait/
+--
+
+--
+get_draft_order()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>678</x><y>378</y><w>112</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30;540;30;540;60</additional_attributes></element><element><id>UMLNote</id><coordinates><x>680</x><y>342</y><w>48</w><h>14</h></coordinates><panel_attributes>switch method request
+
+Для выполнения конечной точки
+/checkout выполняется соответсвующий 
+метод get_route_post_response()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>726</x><y>348</y><w>20</w><h>24</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;30;10;30;100;80;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>702</x><y>468</y><w>68</w><h>14</h></coordinates><panel_attributes>CheckoutSchema
+--
+
+--
+construct()
+get_properties()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>496</y><w>70</w><h>22</h></coordinates><panel_attributes>/AbstractSchema/
+--
+
+--
+construct()
+get_item_schema()
+/get_properties()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>480</y><w>6</w><h>18</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>520</x><y>140</y><w>20</w><h>6</h></coordinates><panel_attributes>_:Checkout_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>526</x><y>144</y><w>6</w><h>56</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;260</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>528</x><y>170</y><w>84</w><h>32</h></coordinates><panel_attributes>get_route_post_response()
+	update_order_from_request()
+		get_request_payment_method_id( $request )
+			get_request_payment_method() {
+			WC()-						&gt;payment_gateways&gt;get_available_payment_gateways();
+}
+				
+				
+			
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>304</x><y>418</y><w>130</w><h>86</h></coordinates><panel_attributes>YooKassa
+--
+bg=#000080</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>346</x><y>392</y><w>68</w><h>20</h></coordinates><panel_attributes>WC_Payment_Gateway
+--
+--
+construct()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>348</x><y>462</y><w>68</w><h>20</h></coordinates><panel_attributes>YooKassaGatewayEPL
+--
+--
+construct()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>378</x><y>410</y><w>6</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>430</y><w>68</w><h>20</h></coordinates><panel_attributes>YooKassaGateway
+--
+--
+construct()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>378</x><y>446</y><w>6</w><h>20</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>832</x><y>0</y><w>250</w><h>158</h></coordinates><panel_attributes>TI Woocommer
+--
+bg=#000080</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>904</x><y>88</y><w>78</w><h>20</h></coordinates><panel_attributes>TInvWL_Includes_API_Wishlist
+--
+--
+construct()
+register_routes()
+wishlist_get_by_user()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>904</x><y>52</y><w>78</w><h>20</h></coordinates><panel_attributes>TInvWL_Wishlist--
+--
+construct()
+set_sharekey()
+get_by_user()
+add_user_default()
+add_sharekey_default()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>864</x><y>60</y><w>28</w><h>14</h></coordinates><panel_attributes>@setcoockie</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>888</x><y>58</y><w>18</w><h>8</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>Relation</id><coordinates><x>978</x><y>52</y><w>16</w><h>42</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;190;60;190;60;10;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>864</x><y>18</y><w>96</w><h>28</h></coordinates><panel_attributes>add_user_default() 	       ---\   
+						set_sharekey()
+add_sharekey_default()  ---/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1196</x><y>254</y><w>416</w><h>204</h></coordinates><panel_attributes>Woo Gutenberg Blocks
+--
+bg=#000080</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1274</x><y>332</y><w>42</w><h>38</h></coordinates><panel_attributes>WC_Shortcode_Products
+--
+get_content()
+product_loop()
+get_query_results()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1340</x><y>330</y><w>42</w><h>38</h></coordinates><panel_attributes>WC_Shortcodes
+--
+_products()_</panel_attributes><additional_attributes></additional_attributes></element></diagram>

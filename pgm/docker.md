@@ -1,3 +1,11 @@
+docker mac (дефолтно через брю запустить анрил)
+
+  
+
+https://stackoverflow.com/questions/44084846/cannot-connect-to-the-docker-daemon-on-macos/76556754?answertab=modifieddesc#tab-top
+
+
+
 {{DOKER}}
 docker stop $(docker ps -a -q)          - stop all containers
 docker rm -vf $(docker ps -aq)          - delete all containers including its volumes

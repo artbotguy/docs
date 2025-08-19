@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"8bc43e268d9ebf37","type":"file","file":"my-web-pet/todo.md","x":-1040,"y":-740,"width":250,"height":283},
+		{"id":"9eb7643cd73c7fb7","type":"text","text":"GUNICORN\n\ngunicorn -w 4 -b 0.0.0.0:8000 wsgi:app > /dev/null 2>&1 &\npkill -f \"gunicorn\"\n\ngunicorn -w 4 -b 0.0.0.0:8000 wsgi:app\n___\n\n**Общая справка:**\nНе зависит от debug=True/False в Flask (но app.config['DEBUG']","x":-362,"y":-176,"width":582,"height":316},
+		{"id":"8246546f2c2aa581","type":"text","text":"Flask севрвер\n    \n- `app.run(debug=True)` – режим отладки (автоперезагрузка, дебаг-панель).\n- `app.run(debug=False)` – обычный режим (но всё равно медленный).","x":300,"y":-176,"width":860,"height":336},
+		{"id":"6fdaef3b079dd7e4","type":"file","file":"my-web-pet/instances/abotkin.space.md","x":-71,"y":-1000,"width":471,"height":400},
+		{"id":"e3c538cb96c97b45","type":"file","file":"my-web-pet/nginx - settings.md","x":380,"y":-1709,"width":1240,"height":629},
+		{"id":"8660d14726f0e1dd","type":"file","file":"my-web-pet/NGENIX Платформа.md","x":-1040,"y":-1594,"width":400,"height":400},
+		{"id":"8fa01a24ab9cea72","type":"file","file":"my-web-pet/instances/static.abotkin.space.md","x":-520,"y":-1000,"width":390,"height":160}
+	],
+	"edges":[]
+}

@@ -11,17 +11,14 @@
             "id": "8c1e764786b3ba14",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "alle.canvas",
-                "viewState": {
-                  "x": -20.089369667045325,
-                  "y": -399.0492455320934,
-                  "zoom": -0.7585643116527535
-                }
+                "file": "Need Learn.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "alle"
+              "icon": "lucide-file",
+              "title": "Need Learn"
             }
           }
         ]
@@ -157,5 +154,13 @@
     }
   },
   "active": "8c1e764786b3ba14",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "WHYLEAVE.md",
+    "Ideas App(s).md",
+    "Ideas Apps.md",
+    "LvlUp Job.md",
+    "new",
+    "LvlUp plan.md",
+    "alle.canvas"
+  ]
 }

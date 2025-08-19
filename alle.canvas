@@ -1,6 +1,6 @@
 {
 	"nodes":[
-		{"id":"4","type":"text","text":"SQL","x":0,"y":-850,"width":200,"height":60},
+		{"id":"4","type":"text","text":"SQL","x":0,"y":-850,"width":200,"height":60,"color":"2"},
 		{"id":"13","type":"text","text":"Командная строка Linux","x":-600,"y":-250,"width":250,"height":60},
 		{"id":"14","type":"text","text":"Основы сетей","x":-300,"y":-250,"width":250,"height":60},
 		{"id":"15","type":"text","text":"Docker","x":0,"y":-250,"width":250,"height":60},

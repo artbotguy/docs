@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"id":"3e5b9341075e7392","x":-359,"y":-173,"width":419,"height":173,"type":"text","text":"скрипт чистит по всем эджам для удаленных аккаунтов, делая их common"},
+		{"id":"52b22d5e2ba705ee","x":-273,"y":117,"width":250,"height":60,"type":"text","text":"скрипт 2 ищет common и переделывает их в pool"},
+		{"id":"e04178e17c78ef74","x":280,"y":-224,"width":740,"height":401,"type":"text","text":"# TODO\n\n# накинуть удаление за прогон один старый с удаленного акка и вывести его"}
+	],
+	"edges":[
+		{"id":"95881cada400e3d7","fromNode":"3e5b9341075e7392","fromSide":"bottom","toNode":"52b22d5e2ba705ee","toSide":"top"}
+	]
+}
